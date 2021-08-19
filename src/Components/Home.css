@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.home{
+    width:100%;
+    height: 100vh;
+    background-color:#ffffff;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+.left-div{
+    width:50%;
+    height:100vh;
+   
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+}
+.left-div > .bank-name{
+    font-size:100px;
+}
+.left-div > h3{
+    width:300px;
+    text-align:center;
+    padding: 8px 0;
+    border-radius: 8px;
+    background-color:#D8EBE4;
+    margin:15px 0;
+    margin-right: 100px;
+    cursor:pointer;
+
+    
+}
+.right-div{
+    width:50%;
+    height:100vh;
+   
+}
+.right-div >img {
+    display: block;
+    margin-left:auto;
+    height:100vh;
+    object-fit: contain;
+}
+.the{
+    color:#FED049;
+}
+.sparks{
+    color:#007580;
+}
+.bank{
+    color:#282846;
+}
+.link{
+    all:unset;
+}
+@media screen and (max-width: 480px){
+    .home{
+        flex-direction: column-reverse;
+        background-image: url("../images/mobile_banking.png");
+
+        /* Full height */
+        height: 100%;
+      
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .the,.sparks,.bank{
+        font-weight: bolder;
+    }
+    .right-div{
+        display: none;
+    }
+    .left-div{
+        width: 100%;
+    }
+    .left-div > .bank-name{
+        font-size:50px;
+    }
+    .left-div > h3{
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}

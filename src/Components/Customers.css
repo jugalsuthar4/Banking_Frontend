@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+.customers,.transaction{
+
+    display:flex;
+    width: 100%;
+
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background-color:#082032;
+   position: relative;
+}
+.customers > h2{
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    color: #fff;
+}
+.table-div{
+    overflow-y: scroll;
+}
+.customers > table{
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    border-collapse:separate;
+    border-spacing:15px;
+    
+
+}
+th{
+    color:#fff;
+}
+table,td,tr{
+    padding: 10px;
+    letter-spacing:2px;
+    border-radius: 8px;
+  
+    
+}
+.transfer-icons{
+    width:30px;
+    height:30px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+td{
+    text-align:center;
+    width:fit-content;
+    
+}
+
+tr{
+ 
+    font-weight: bold;
+    margin-top:auto;
+    margin-bottom:auto;
+    
+    
+}
+.data-tr{
+    width:100%;
+     background-color:#FFDEDE;
+     color:#000;
+}
+
+.back-arrow{
+    width:fit-content;
+    height:30px;
+    background-color:#FFDEDE;
+    position:fixed;
+    right:50px;
+     top:650px;
+     border-radius: 100%;
+     padding:10px 20px;
+     cursor: pointer;
+}
+.back-arrow-link{
+    all:unset;
+    color:#fff;
+   
+}
+.arrow-back{
+    height:25px;
+    width:25px;
+}
+
+@media screen and (max-width: 480px) {
+    .customers{
+        overflow-x: auto;
+        width:fit-content
+    }
+    table,tr,td{
+        padding:10px;
+    }
+    tr{
+        overflow-x: auto;
+        letter-spacing:0px;
+        font-size:x-small;
+        /*font-weight:normal;*/
+     
+    }
+    .tradeprice > table{
+        border-spacing: 0px;
+        border-collapse: collapse
+    }
+    .back-arrow{
+        position: absolute;
+        top:10px;
+    }
+    .back-arrow{
+        padding:5px 15px;
+    }
+    .arrow-back{
+        height:15px;
+        width:15px;
+    }
+    td> img{
+        height:10px;
+    }
+    .data-tr{
+        width:50%;
+    }
+}

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.transfer-money{
+    width:100%;
+    height: 100vh;
+    background-color:#ffffff;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+.transfer-left-div{
+    flex:0.3;
+    height:100vh;
+   
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+    background-color:#FED049;
+}
+.transfer-right-div{
+    flex:0.7;
+    height:100vh;
+   
+}
+.transfer-sender-details{
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    margin:50px 0;
+    padding:40px 0;
+    background-color:#FFDEDE;
+}
+.transfer-sender-details > h2{
+    color:#3D087B;
+}
+.transfer-right-div >img {
+    display: block;
+    margin-left:auto;
+    height:100vh;
+    object-fit: contain;
+}
+:root {
+   
+    --gray: #F43B86;
+    --darkgray: #082032;
+  }
+select {
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select wrapper */
+  .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+  }
+  option{
+      padding:10px 8px;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #082032;
+    transition: .25s all ease;
+    color: #fff;
+    pointer-events: none;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+  }
+
+  h1 {
+    margin: 0 0 0.25em;
+  }
+  
+  .transfer-button{
+      all:unset;
+      display:block;
+      margin-top:20px;
+      margin-left:auto;
+      margin-right:auto;
+      padding:10px;
+      cursor: pointer;
+      border: 1px solid #f39c12;
+      border-radius:10px;
+      background-color:#082032;
+      color: #fff;
+  }
+  .amount-input{
+      all:unset;
+      display: block;
+      margin-top:20px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      background-color:#082032;
+      border:1px solid #f39c12;
+      border-radius: 8px;
+      color:#fff;
+  }
+  @media screen and (max-width: 480px){
+    .transfer-right-div{
+      display:none;
+    }
+    .transfer-left-div{
+      flex: 1;
+    }
+    .transfer-sender-details > h2 > u{
+      font-size:small;
+    }
+  }
