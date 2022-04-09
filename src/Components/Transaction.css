@@ -3,7 +3,7 @@
 
     display:flex;
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     font-family: 'Oswald', sans-serif;
     display: flex;
     justify-content:flex-start;
