@@ -3458,6 +3458,11 @@
   "resolved" "https://registry.npmjs.org/clean-stack/-/clean-stack-2.2.0.tgz"
   "version" "2.2.0"
 
+"clientside-session-manager@^1.0.3":
+  "integrity" "sha512-Vw+4WWFU7x4+dBA+mHxzmUCoZi7HEM2RRDH/a2aJjAUYKTqf4MTzkN0fQL8LavW065dqlqxBz+B+zQ4JPQnjtw=="
+  "resolved" "https://registry.npmjs.org/clientside-session-manager/-/clientside-session-manager-1.0.3.tgz"
+  "version" "1.0.3"
+
 "cliui@^5.0.0":
   "integrity" "sha512-PYeGSEmmHM6zvoef2w8TPzlrnNpXIjTipYK780YswmIP9vjxmd6Y2a3CB2Ks6/AU8NHjZugXvo8w3oWM2qnwXA=="
   "resolved" "https://registry.npmjs.org/cliui/-/cliui-5.0.0.tgz"

@@ -4,6 +4,7 @@ import axios from "axios";
 import Payment from "../images/payment.jpg";
 import { isForOfStatement } from "@babel/types";
 import { useNavigate } from "@reach/router";
+import SessionManager from "clientside-session-manager";
 
 function Transfer(props) {
   const [Data, setData] = useState();
@@ -12,7 +13,10 @@ function Transfer(props) {
   const [Recipient, setRecipient] = useState();
   const [amount, setAmount] = useState(0);
   const navigate = useNavigate();
+  const token = SessionManager.getAll();
 
+  console.log(token);
+  console.log(SessionManager.exists());
   const handleTransfer = (e) => {
     e.preventDefault();
     if (currentUser[0].balance < amount) {
@@ -27,8 +31,8 @@ function Transfer(props) {
           amount: amount,
         })
         .then(() => {
-          alert("transaction successfull");
-          navigate("/", { replace: true });
+          //alert("transaction successfull");
+          navigate(`/showbalance`, { replace: true });
         })
         .catch((err) => {
           if (err.response) {

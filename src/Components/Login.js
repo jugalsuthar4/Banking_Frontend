@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import { useNavigate } from "@reach/router";
+import { loginContext } from "../App";
+import SessionManager from "clientside-session-manager";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [pin, setPin] = useState("");
   const navigate = useNavigate();
+  const { user, setUser } = useContext(loginContext);
+
   const handleLogin = (e) => {
     e.preventDefault();
     if (email === "" || pin === "") {
@@ -19,9 +23,18 @@ function Login() {
           pin,
         })
         .then((data) => {
-          if (data.status == 200) {
+          if (data.status === 200) {
             console.log(data.data.data);
+            setUser(data.data.data);
+            SessionManager.create(
+              "randomaccesstoken",
+              { id: `${data.data.data}` },
+              180
+            );
             navigate(`/transfer/${data.data.data}`, { replace: true });
+          }
+          if (data.status === 400) {
+            alert("Invalid credentials");
           }
         })
         .catch((err) => console.log("error"));
